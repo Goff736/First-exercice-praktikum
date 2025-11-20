@@ -14,6 +14,7 @@ df = pm4py.convert_to_dataframe(log)
 print(df.head())
 print(df.columns)
 
+#Basic analysis
 num_cases = df['case:concept:name'].nunique()
 print("Number of cases:", num_cases)
 
