@@ -30,7 +30,7 @@ The analysis focuses on understanding the loan application process from the BPI 
 ```text
 .
 |-- README.md
-|-- ..py
+|-- process_mining_analysis.py
 |-- process tree.png
 |-- process heuristics tree.png
 |-- process_model.png
