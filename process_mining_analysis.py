@@ -1,5 +1,6 @@
 import pm4py
 import pandas as pd
+from pathlib import Path
 
 from pm4py.algo.evaluation.replay_fitness import algorithm as fitness
 from pm4py.algo.evaluation.precision import algorithm as precision
@@ -7,7 +8,13 @@ from pm4py.algo.evaluation.generalization import algorithm as generalization
 from pm4py.algo.evaluation.simplicity import algorithm as simplicity
 
 
-file_path = r"C:\Users\SBS\Downloads\1st ex PRAK\BPI Challenge 2017_1_all\BPI Challenge 2017.xes.gz"
+file_path = Path("data") / "BPI Challenge 2017.xes.gz"
+if not file_path.exists():
+    raise FileNotFoundError(
+        "Event log not found. Download the BPI Challenge 2017 event log "
+        "and place it at data/BPI Challenge 2017.xes.gz."
+    )
+
 log = pm4py.read_xes(file_path)
 df = pm4py.convert_to_dataframe(log)
 
