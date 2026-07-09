@@ -74,7 +74,7 @@ pip install pandas pm4py
 Run the analysis script:
 
 ```bash
-python ..py
+python process_mining_analysis.py
 ```
 
 The script prints summary statistics to the console and generates process mining visualizations such as the process tree, heuristics miner output, and BPMN model.
